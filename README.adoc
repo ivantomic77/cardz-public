@@ -15,6 +15,13 @@ Coming soon
 
 - `/backend` - Contains the Go-based backend application.
 
+== Environment variables
+
+|===
+| Name         | Default | Description
+| SERVER_PORT  | 8080    | The port number on which the backend server will listen. If not set, defaults to 8080.
+|===
+
 == Running locally (Self-Hosting guide)
 
 Coming soon

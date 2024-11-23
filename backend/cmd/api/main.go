@@ -1,17 +1,25 @@
 package main
 
-import "log"
+import (
+	"log"
+	"os"
+)
 
 func main() {
+	addr := getEnvOrDefault("SERVER_PORT", "8080")
+
 	cfg := config{
-		addr: ":8080",
+		addr: ":" + addr,
 	}
 
-	app := &application{
-		config: cfg,
+	app := &application{config: cfg}
+
+	log.Fatal(app.run(app.mount()))
+}
+
+func getEnvOrDefault(envVar, defaultVal string) string {
+	if value := os.Getenv(envVar); value != "" {
+		return value
 	}
-
-	mux := app.mount()
-
-	log.Fatal(app.run(mux))
+	return defaultVal
 }
