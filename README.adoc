@@ -3,10 +3,7 @@
 CardZ is an open-source platform for creating card decks and enabling users to play them in various game modes. The platform encourages self-hosting, giving users full control over their experience.
 
 == Table of Contents
-
-:toc:
-:toc-placement!:
-toc::[]
+:toc: auto
 
 == Features
 
