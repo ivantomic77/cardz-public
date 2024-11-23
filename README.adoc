@@ -1,0 +1,51 @@
+= CardZ Project
+
+CardZ is an open-source platform for creating card decks and enabling users to play them in various game modes. The platform encourages self-hosting, giving users full control over their experience.
+
+== Table of Contents
+
+:toc:
+:toc-placement!:
+toc::[]
+
+== Features
+
+Coming soon
+
+== Changelog
+
+Coming soon
+
+== Project Structure
+
+- `/backend` - Contains the Go-based backend application.
+
+== Running locally (Self-Hosting guide)
+
+Coming soon
+
+== Development Guide
+
+=== Backend
+
+To run the Go backend application, use the following commands:
+
+*Windows:*
+[source,bash]
+----
+go run ./...
+----
+
+*Linux:*
+[source,bash]
+----
+go run *.go
+----
+
+== Contributing
+
+Pull requests are welcome but please submit an issue before doing any work.
+
+== License
+
+link:./License[GNU Affero General Public License v3.0]
