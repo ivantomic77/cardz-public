@@ -3,18 +3,20 @@ package main
 import (
 	"log"
 	"os"
+
+	"github.com/FlamingoTP/cardz/internal/api"
 )
 
 func main() {
 	addr := getEnvOrDefault("SERVER_PORT", "8080")
 
-	cfg := config{
-		addr: ":" + addr,
+	cfg := api.Config{
+		Addr: ":" + addr,
 	}
 
-	app := &application{config: cfg}
+	app := &api.Application{Config: cfg}
 
-	log.Fatal(app.run(app.mount()))
+	log.Fatal(app.Run(app.Mount()))
 }
 
 func getEnvOrDefault(envVar, defaultVal string) string {
