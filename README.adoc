@@ -32,16 +32,10 @@ Coming soon
 
 To run the Go backend application, use the following commands:
 
-*Windows:*
 [source,bash]
 ----
-go run ./...
-----
-
-*Linux:*
-[source,bash]
-----
-go run *.go
+cd backend
+go run ./cmd/main.go
 ----
 
 == Contributing

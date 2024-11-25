@@ -5,15 +5,15 @@ import (
 	"net/http"
 )
 
+var health = healthResponse{
+	Status: "UP",
+}
+
 type healthResponse struct {
 	Status string `json:"status"`
 }
 
 func GetHealth(w http.ResponseWriter, _ *http.Request) {
-	health := healthResponse{
-		Status: "UP",
-	}
-
 	response, err := json.Marshal(health)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
