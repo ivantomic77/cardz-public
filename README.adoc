@@ -18,8 +18,13 @@ Coming soon
 == Environment variables
 
 |===
-| Name         | Default | Description
-| SERVER_PORT  | 8080    | The port number on which the backend server will listen. If not set, defaults to 8080.
+| Name                  | Default           | Description
+| SERVER_PORT           | 8080              | The port number on which the backend server will listen. If not set, defaults to 8080.
+| DATABASE_NAME         | cardz             | Name of postgres database.
+| DATABASE_ADDRESS      | localhost:5432    | Full address of the postgres database.
+| DATABASE_USERNAME     | user              | Username of the database user.
+| DATABASE_PASSWORD     | s3cret            | Password of the database user.
+| DATABASE_ARGS         | ?sslmode=disable  | Additional args for the postgres database.
 |===
 
 == Running locally (Self-Hosting guide)
@@ -27,6 +32,16 @@ Coming soon
 Coming soon
 
 == Development Guide
+
+=== Development dependencies
+
+To run dependencies needed for development, we prepared a docker compose file.
+
+Run this command in the root directory of this project:
+[source,bash]
+----
+docker compose up -d
+----
 
 === Backend
 
